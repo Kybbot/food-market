@@ -1,0 +1,471 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+header
+	background-color: #5C9922
+	height: 100px
+
+.logo
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	&-name
+		color: #ffffff
+		font-size: 48px
+		margin: 0
+		display: inline-block
+
+.yellow
+	color: $accent
+
+.fa-shopping-cart
+	color: #ffffff
+	font-size: 40px
+	margin-right: 5px	
+
+.search-form
+	height: 100%
+	width: 100%
+	display: 	flex
+	align-items: center
+	justify-content: center
+
+.search
+	width: 100%
+	height: 30px
+	border-radius: 5px
+	padding: 5px
+	border: 1px solid #ffffff
+	position: relative
+	background-color: #E2E2E2
+	transition: all .5s ease
+	z-index: 999
+	&:hover
+		background-color: #ffffff
+	&:focus
+		background-color: #ffffff	
+
+.fa-search
+	position: absolute	
+	right: 20px 	
+	cursor: pointer	
+	z-index: 999
+
+.info
+	background-color: #6DAF29
+
+.info-cat
+	background-size: cover
+	background-position: center
+	height: 200px
+	min-height: 200px
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	&:before
+		content: ''
+		height: 200px
+		width: 100%
+		background-color: #1c2026
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		opacity: .55
+
+.cat-title
+	color: #fff
+	font-size: 40px
+	position: relative
+	z-index: 999		
+
+ul, li
+	list-style-type: none
+	margin: 0
+	padding: 0 	
+	color: #ffffff
+
+nav
+	padding: 5px 0
+	text-align: left
+
+ul
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+
+li
+	margin-right: 35px
+	a
+		color: #ffffff
+		transition: all .3s ease
+		&:hover
+			text-decoration: none
+			color: $accent	
+
+.nav-item
+	height: 150px
+	width: 250px
+	border-radius: 10px
+	background-color: #F0B83F
+	background-position: center
+	background-size: cover
+	position: relative
+	margin: 20px 30px 20px 0
+	&-title
+		color: #ffffff
+		font-size: 28px	
+		z-index: 999
+		position: absolute
+		left: 15px
+		top: 40px
+		margin: 0
+		a
+			color: #ffffff
+			transition: all .3s ease
+			&:hover
+				color: $accent
+	&:before
+		content: ''
+		height: 150px
+		width: 250px
+		border-radius: 10px
+		background-color: #1c2026
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		opacity: .55
+
+.products-title
+	margin: 10px 0 
+	font-size: 20px
+
+main
+	flex: 1 0 auto
+
+.product-items
+	padding: 20px 0
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-wrap: wrap
+
+.product-item
+	height: 200px
+	width: 200px
+	text-align: center
+	margin: 0 24px 10px 0
+	padding: 10px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	border-bottom: 1px solid
+	img
+		max-width: 100%
+		max-height: 140px
+	&-title
+		font-size: 18px
+		color: #6DAF29
+	&-price
+		font-size: 16px
+		color: orange		
+
+.wrapper
+	display: flex
+	flex-direction: column
+	height: 100%
+
+footer
+	flex: 0 0 auto
+	background-color: #F6F6F6
+	padding: 10px 0
+	ul
+		flex-direction: column
+		align-items: flex-start
+	ul, li, a
+		color: #000
+		margin: 0
+
+.footer-title
+	margin: 0
+
+.email
+	width: 65%
+	border-radius: 5px
+	padding: 5px
+	border: 1px solid #ffffff
+	background-color: #E2E2E2
+	transition: all .5s ease
+	&:hover
+		background-color: #ffffff
+	&:focus
+		background-color: #ffffff	
+
+.submit
+	cursor: pointer
+	border-radius: 5px
+	padding: 5px
+	border: 1px solid #ffffff
+	background-color: $accent
+	transition: all .2s ease
+	&:active
+		transform: scale(0.95)
+
+.contacts
+	text-align: center
+
+.address, .phone
+	font-size: 18px
+
+.phone a
+	color: #000
+	margin-left: 5px
+	&:hover
+		color: orange	
+
+.fa-map-marker, .fa-phone	
+	color: #6DB02D
+	font-size: 22px
+
+
+// Dashboard
+
+.dashboard-body
+	background-color: #F4F8F9	
+
+.dashboard-header
+	height: auto	
+
+.header-title
+	margin: 0
+	color: #fff
+	font-size: 28px	
+
+.dashboard-item
+	height: 100px
+	width: 200px
+	border-radius: 10px
+	background-image: radial-gradient( circle 767px at 10.2% 22.1%,  rgba(11,218,81,1) 0%, rgba(0,191,255,1) 90% )
+	background-position: center
+	background-size: cover
+	position: relative
+	margin: 20px 30px 20px 0
+	transition: all 0.3s ease
+	&-title
+		color: #ffffff
+		font-size: 20px	
+		z-index: 999
+		position: absolute
+		left: 15px
+		top: 25px
+		margin: 0
+		line-height: 1.2
+		transition: all .3s ease
+		&:hover
+			cursor: pointer
+			text-decoration: underline
+			color: $accent
+	&:hover
+		box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.75)				
+
+.view
+	background-image: linear-gradient( 292.2deg,  rgba(51,85,255,1) 33.7%, rgba(0,136,255,1) 93.7% )
+
+.dashboard-main
+	background-color: #ffffff
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4)
+	border-radius: 3px
+	padding: 10px
+	&-title
+		font-weight: normal
+		margin: 0
+		margin-left: 10px
+
+.items-style
+	&-btn
+		background-color: #EEEEEE
+		border-radius: 3px
+		border-style: none
+		transition: all 0.5s ease
+		margin-right: 10px
+		&:hover
+			box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.5)
+			cursor: pointer
+
+.dashboard-product-item
+	margin: 0 10px 10px 0
+
+.product-item-small	
+	height: 100px
+	width: 100px
+	text-align: center
+	margin: 0 5px 15px 0
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	border-bottom: 1px solid
+	img
+		max-width: 100%
+		max-height: 55px
+	&-title
+		font-size: 16px
+		color: #6DAF29
+		line-height: 1.1
+	&-price
+		font-size: 14px
+		color: orange
+		margin-bottom: 10px
+
+.add-product-form
+	margin-top: 10px
+
+.form-group, .form-photo
+	display: flex
+	flex-direction: column
+
+.form-group input
+	width: 100%
+	margin-bottom: 15px
+	padding: 5px
+	border-radius: 3px
+
+.form-photo input
+	width: 100%
+	border-style: none	
+
+.submit-btn, .reset-btn
+	margin-top: 15px
+	border-radius: 3px
+	border-style: none
+	padding: 5px 10px
+	color: #ffffff
+	background-image: linear-gradient(107deg,#0dc6b4 8.1%,#21c68a 79.5%)
+	&:hover
+		cursor: pointer
+	&:focus	
+		transform: scale(0.95)
+
+.reset-btn
+	background-image: radial-gradient(circle 870px at 12.5% 27.5%,#5c95dc 36.2%,#4183d7 72.8%)
+
+.hide
+	display: none
+	
+// LOGIN
+
+.paralax
+	position: fixed
+	display: flex
+	align-items: center
+	height: 100vh
+	overflow: hidden	
+	z-index: 999	
+
+.paralax-bg
+	position: absolute
+	z-index: -1
+	width: 110%
+	height: 110%
+	background-image: url(../img/bg/1.jpg)
+	background-position: center
+	background-size: cover		
+
+.authorization-form
+	height: 100vh
+	width: 100vw
+	display: flex
+	justify-content: center
+	align-items: center
+
+.authorization
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center	
+	background-color: rgba(255, 255, 255, .5)
+	border-radius: 5px
+	padding: 30px
+
+.authorization-title
+	margin: 0
+	padding: 0
+	padding: 20px 0
+	color: #000000
+
+.login, .password
+	margin: 10px 0
+	border-radius: 3px
+	border-style: none
+	padding-left: 10px
+	box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75)
+
+.login:focus, .password:focus
+	border: 1px solid #FFB100	
+
+.authorization-buttons
+	padding: 10px 0	
+	width: 100%
+	display: flex
+	justify-content: space-between
+
+.viewing, .login-submit	
+	border-style: none
+	border-radius: 3px
+	color: #ffffff
+	cursor: pointer
+	width: 48%
+	box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.75)
+
+.viewing
+	background-image: radial-gradient( circle farthest-corner at 12.3% 19.3%,  rgba(85,88,218,1) 0%, rgba(95,209,249,1) 100.2% )
+	
+.login-submit
+	background-image: linear-gradient( 107deg,  rgba(13,198,180,1) 8.1%, rgba(33,198,138,1) 79.5% )
+
+@import "media" // Always at the end
