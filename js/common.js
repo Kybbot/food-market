@@ -29,7 +29,7 @@ $(function() {
 		let email = $('.email').val();
 
 		if ( email == '' ) {
-			alert("Заполните пожалуйста поля!")
+			alert("Заполните пожалуйста поля!");
 		} else {
 			$.ajax({
 				type: $(this).attr('method'),
