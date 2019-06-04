@@ -28,9 +28,18 @@ $(function() {
 
 		let email = $('.email').val();
 
-		if ( email == '' ) {
-			alert("Заполните пожалуйста поля!");
-		} else {
+		function validate() {
+			var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+			var address = $('.email').val();
+			if(reg.test(address) == false) {
+				alert('Введите корректный e-mail');
+				return false;
+			} else {
+				return true;
+			}
+		}
+
+		if ( validate() == true ) {
 			$.ajax({
 				type: $(this).attr('method'),
 				url: $(this).attr('action'),
